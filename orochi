@@ -4,6 +4,6 @@ xinput --list --short | grep Orochi | while read -r line ; do
     echo $line
     plop=$(echo $line | cut -d ' ' -f 7)
     eval $plop
-    xinput --set-prop $id "Device Accel Constant Deceleration" 12
+    xinput --set-prop $id "Device Accel Constant Deceleration" ${1:-4}
 done
 
